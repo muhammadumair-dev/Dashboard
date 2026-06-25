@@ -7,6 +7,7 @@ import Orders from './pages/Orders';
 import CommentsPage from './pages/Comments';
 import CategoriesPage from './pages/Categories';
 import InventoryPage from './pages/Inventory';
+import Deals from './pages/Deals';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -15,6 +16,8 @@ export default function App() {
     switch (currentPage) {
       case 'products':
         return <Products />;
+          case 'deals':
+        return <Deals />;
       case 'orders':
         return <Orders />;
       case 'comments':
