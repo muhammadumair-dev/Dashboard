@@ -59,7 +59,7 @@ export default function DealsList() {
     if (!confirm('Are you sure you want to delete this deal?')) return;
     setDeletingId(id);
     try {
-      const { error } = await supabase.from(TABLES.DEALS).delete().eq('id', id);
+      const { error } = await supabase.from('deals').delete().eq('id', id);
       if (error) throw error;
       setSuccessMsg('Deal deleted successfully.');
       setTimeout(() => setSuccessMsg(''), 3000);
